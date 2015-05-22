@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="airports">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>ua.george_nika.model.entity.NamesEntity</class>
+        <class>ua.george_nika.model.entity.AirportEntity</class>
+        <class>ua.george_nika.model.entity.LanguageEntity</class>
+
+        <properties>
+
+<!--            <property name="eclipselink.ddl-generation"
+                      value="drop-and-create-tables"/>
+            <property name="eclipselink.logging.level" value="FINE"/> -->
+
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/airports"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="Java159753"/>
+        </properties>
+    </persistence-unit>
+</persistence>
